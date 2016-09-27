@@ -1,0 +1,29 @@
+<view class="container">
+  <swiper indicator-dots="true" class="banner">
+    <block wx:for="{{bannerData}}">
+      <swiper-item>
+        <view class="bannerItem">
+          <image src="{{item.promote_img}}" mode="aspectFit" class="bannerItem"/>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="container">
+    <block wx:for="{{listData}}">
+      <view class="listBar">
+        <text>{{item.column_name}}</text>
+        <text>全部</text>
+      </view>
+      <!--<navigator wx:else url="../detail/detail?id={{item.id}}">
+        <view class="news-item" >
+          <view class="news-item-left">
+            <text class="news-item-title">{{item.title}}</text>
+          </view>
+          <view class="news-item-right">
+            <image src="{{item.images[0]}}" class="news-image"/>
+          </view>
+        </view>
+      </navigator>-->
+    </block>
+  </view>
+<view>
