@@ -14,18 +14,15 @@
         <text class="textLeft">{{listItem.column_name}}</text>
         <text class="textRight">全部 ></text>
       </view>
-      <view class="listBookContainer">
-        <image src="{{listItem.column_list.book_info[0].small_pic_url}}" mode="aspectFit" class="listBookCover"/>
+      <view wx:for="{{listItem.column_list.book_info}}" wx:for-item="listBookItem" class="listBookContainer">
+        <image src="{{listBookItem.small_pic_url}}" mode="aspectFit" class="listBookCover"/>
         <view class="listBookDesc">
-          <text class="listBookTitleText">{{listItem.column_list.book_info[0].title}}</text>
-          <text class="listBookTextInfo">作者:{{listItem.column_list.book_info[0].author}}</text>
-          <text class="listBookTextDescInfo">{{listItem.column_list.book_info[0].summary}}</text>
-          <text class="listBookTextInfo">价格:{{listItem.column_list.book_info[0].current_price}}</text>
+          <text class="listBookTitleText">{{listBookItem.title}}</text>
+          <text class="listBookTextInfo">作者:{{listBookItem.author}}</text>
+          <text class="listBookTextDescInfo">{{listBookItem.summary}}</text>
+          <text class="listBookTextInfo">价格:{{listBookItem.current_price}}</text>
         </view>
       </view>
-      <!--<view wx:for="{{listItem.column_list}}" wx:for-item="listBookItem" class="listBookContainer red">
-        <text class="textRight">全部 ></text>
-      </view>-->
       <!--<navigator wx:else url="../detail/detail?id={{item.id}}">
         <view class="news-item" >
           <view class="news-item-left">
