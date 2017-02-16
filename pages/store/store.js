@@ -9,7 +9,7 @@ Page({
     // 页面初始化 options为页面跳转所带来的参数
     var self = this;
     wx.request({
-        url:'http://appwk.baidu.com/nahome/freepromote?na_uncheck=1&opid=wk_na&fr=6&bid=7&wh=146,186',
+        url:'XXXX',
         header: {
             'Content-Type': 'application/json'
         },
@@ -24,7 +24,7 @@ Page({
     });
 
     wx.request({
-        url:'http://appwk.baidu.com/nahome/freecolumn?na_uncheck=1&opid=wk_na&fr=6&bid=7&wh=146,186&summary=1&pn=0&rn=2',
+        url:'XXXX',
         header: {
             'Content-Type': 'application/json'
         },
